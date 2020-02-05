@@ -37,6 +37,7 @@
     file: 'sampledata/laskiaispulla3.obj',
     name: 'laskiaispulla3',
     recenter: 'root',
+    scale: 0.2,
   },
   version: '0.54:2',
 }

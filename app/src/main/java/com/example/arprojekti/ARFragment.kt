@@ -24,7 +24,6 @@ class ARFragment : Fragment() {
     private var position = 0
     private lateinit var modelUri: Uri
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

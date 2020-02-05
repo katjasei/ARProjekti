@@ -16,24 +16,18 @@ class FragmentMenuList : Fragment() {
 
     internal var activityCallBack: FragmentMenuListListener? = null
     private lateinit var menuRecycler: RecyclerView
-    val menuItems = MenuModel.menuItems
+    private val menuItems = MenuModel.menuItems
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_menu_list, container, false)
         menuRecycler= view.findViewById(R.id.my_recycler_view)
-
-       // menuRecycler.onCli{parent, view, position, id ->
-         //   activityCallBack!!.onElementClick(position)
-        //}
         menuRecycler.apply{
 
             adapter = MenuAdapter(menuItems)
             layoutManager = LinearLayoutManager(context)
-
         }
         return view
-
     }
 
     interface FragmentMenuListListener {
@@ -50,17 +44,11 @@ class FragmentMenuList : Fragment() {
     private inner class MenuAdapter (private val myDataset: List<MenuItem>) :
         RecyclerView.Adapter<MenuAdapter.MyViewHolder>() {
 
-
-        // Provide a reference to the views for each data item
-        // Complex data items may need more than one view per item, and
-        // you provide access to all the views for a data item in a view holder.
-        // Each data item is just a string in this case that is shown in a TextView.
         inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
-
 
         // Create new views (invoked by the layout manager)
         override fun onCreateViewHolder(parent: ViewGroup,
-                                        viewType: Int): MenuAdapter.MyViewHolder {
+                                        viewType: Int): MyViewHolder {
 
             // create a new view
             val view = LayoutInflater.from(parent.context)
@@ -90,7 +78,6 @@ class FragmentMenuList : Fragment() {
         // Return the size of your dataset (invoked by the layout manager)
         override fun getItemCount() = myDataset.size
     }
-
 }
 
 
