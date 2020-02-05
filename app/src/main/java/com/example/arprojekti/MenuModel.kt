@@ -7,9 +7,9 @@ object MenuModel {
 
     val menuItems: MutableList<MenuItem> = java.util.ArrayList()
     init {
-        menuItems.add(MenuItem(R.drawable.falafel, "Laskiaispulla", "Dessert"))
-        menuItems.add(MenuItem(R.drawable.falafel, "Leipä", "Main"))
-        menuItems.add(MenuItem(R.drawable.falafel, "Kahvi", "Drink"))
+        menuItems.add(MenuItem(R.drawable.laskiais, "Laskiaispulla", "Dessert"))
+        menuItems.add(MenuItem(R.drawable.voileipa, "Leipä", "Main"))
+        menuItems.add(MenuItem(R.drawable.kahvi, "Kahvi", "Drink"))
     }
 }
 

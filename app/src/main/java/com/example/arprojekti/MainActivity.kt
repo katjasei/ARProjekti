@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 
 class MainActivity : AppCompatActivity(), FragmentMenuList.FragmentMenuListListener {
+
     //Create a new Fragment to be placed in the activity layout
     private val menuListFragment = FragmentMenuList()
     private val arFragment = ARFragment()

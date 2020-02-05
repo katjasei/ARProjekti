@@ -33,29 +33,33 @@
 
                 <ImageView
                     android:id="@+id/meal_image"
-                    android:layout_width="100dp"
+                    android:layout_width="120dp"
                     android:layout_height="100dp"
                     android:contentDescription="@string/ccont_desc_meal_img"
                     tools:srcCompat="@drawable/falafel" />
 
                 <LinearLayout
                     android:orientation="vertical"
-                    android:layout_width="300dp"
+                    android:layout_width="280dp"
                     android:layout_height="100dp">
 
                     <TextView
                         android:id="@+id/txt_meal_name"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:text="@string/txt_meal_name" />
+                        android:gravity="center"
+                        android:text="@string/txt_meal_name"
+                        android:textColor="#F7070606"
+                        android:textStyle="bold|italic" />
 
                     <TextView
                         android:id="@+id/txt_meal_type"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:text="@string/txt_meal_type" />
+                        android:gravity="center"
+                        android:text="@string/txt_meal_type"
+                        android:textColor="#F7070606"
+                        android:textStyle="bold|italic" />
 
                 </LinearLayout>
 

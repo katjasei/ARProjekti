@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.menu_item.*
 import kotlinx.android.synthetic.main.menu_item.view.*
 
 
@@ -64,7 +65,7 @@ class FragmentMenuList : Fragment() {
 
             val meal = myDataset[position]
 
-            //holder.itemView.meal_image.setImageDrawable(resources.getDrawable(R.drawable.falafel))
+            holder.itemView.meal_image.setImageResource(meal.img)
             holder.itemView.txt_meal_name.text = meal.itemName
             holder.itemView.txt_meal_type.text = meal.itemType
 
