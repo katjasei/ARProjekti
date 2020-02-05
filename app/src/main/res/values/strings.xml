@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ARProjekti</string>
+    <string name="txt_meal_name">Meal name</string>
+    <string name="txt_meal_type">Meal type</string>
+    <string name="txt_meal_image">Meal image</string>
+    <string name="ccont_desc_meal_img">Meal image</string>
+    <string name="txt_menu">Menu</string>
+</resources>
