@@ -49,3 +49,8 @@ sceneform.asset('sampledata/valmisleipa3.obj',
         'default',
         'sampledata/valmisleipa3.sfa',
         'src/main/assets/valmisleipa3')
+
+sceneform.asset('sampledata/laskiaispulla3.obj',
+        'default',
+        'sampledata/laskiaispulla3.sfa',
+        'src/main/assets/laskiaispulla3')

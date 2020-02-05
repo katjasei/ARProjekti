@@ -22,7 +22,8 @@ class FragmentMenuList : Fragment() {
         val view = inflater.inflate(R.layout.fragment_menu_list, container, false)
         menuRecycler= view.findViewById(R.id.my_recycler_view)
 
-       menuItems.add(MenuItem(R.drawable.falafel, "Falafel and rice", "Main dish"))
+       menuItems.add(MenuItem(R.drawable.falafel, "Laskiaispulla", "Dessert"))
+       menuItems.add(MenuItem(R.drawable.falafel, "Leipä", "Main"))
 
        // menuRecycler.onCli{parent, view, position, id ->
          //   activityCallBack!!.onElementClick(position)
