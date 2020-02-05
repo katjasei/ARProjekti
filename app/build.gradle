@@ -54,3 +54,8 @@ sceneform.asset('sampledata/laskiaispulla3.obj',
         'default',
         'sampledata/laskiaispulla3.sfa',
         'src/main/assets/laskiaispulla3')
+
+sceneform.asset('sampledata/coffee cup.obj',
+        'default',
+        'sampledata/coffee cup.sfa',
+        'src/main/assets/coffee cup')

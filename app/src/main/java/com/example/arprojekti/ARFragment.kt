@@ -37,10 +37,11 @@ class ARFragment : Fragment() {
         button.setOnClickListener{ addObject() }
         fragment = childFragmentManager.findFragmentById(R.id.sceneform_fragment) as ArFragment
 
-        //position switch
+        //model position switch
         when (position) {
             0 -> modelUri = Uri.parse("laskiaispulla3.sfb")
             1 -> modelUri = Uri.parse("valmisleipa3.sfb")
+            2 -> modelUri = Uri.parse("coffee cup.sfb")
             else -> {
                 Log.d("TAG", "No model uri, using deafult 0")
                 modelUri = Uri.parse("laskiaispulla3.sfb")
