@@ -2,6 +2,7 @@ package com.example.arprojekti
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -81,6 +82,7 @@ class FragmentMenuList : Fragment() {
 
             holder.itemView.setOnClickListener {
                 // set "OnItemClickListener", when user click on ListView element
+                Log.d("TAG","Position menuFragment passed: $position")
                 activityCallBack!!.onElementClick(position)
             }
         }

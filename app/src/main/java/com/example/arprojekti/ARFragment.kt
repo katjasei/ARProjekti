@@ -21,6 +21,8 @@ class ARFragment : Fragment() {
 
     private lateinit var fragment: ArFragment
     private var testRenderable: ModelRenderable? = null
+    private var position = 0
+    private lateinit var modelUri: Uri
 
 
     override fun onCreateView(
@@ -29,11 +31,24 @@ class ARFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        Log.d("TAG", "Position arFragment got: $position")
+
         val view = inflater.inflate(R.layout.ar_fragment, container, false)
         val button = view.findViewById<Button>(R.id.btn_click)
         button.setOnClickListener{ addObject() }
         fragment = childFragmentManager.findFragmentById(R.id.sceneform_fragment) as ArFragment
-        val modelUri = Uri.parse("valmisleipa3.sfb")
+
+        //position switch
+        when (position) {
+            0 -> modelUri = Uri.parse("laskiaispulla3.sfb")
+            1 -> modelUri = Uri.parse("valmisleipa3.sfb")
+            else -> {
+                Log.d("TAG", "No model uri, using deafult 0")
+                modelUri = Uri.parse("laskiaispulla3.sfb")
+            }
+        }
+
+        //modelUri = Uri.parse("valmisleipa3.sfb")
         val renderableFuture = ModelRenderable.builder()
             .setSource(fragment.context, modelUri)
             .build()
@@ -41,6 +56,10 @@ class ARFragment : Fragment() {
             renderableFuture.thenAccept { testRenderable = it }
         }
         return view
+    }
+
+    fun setPosition(pos: Int) {
+        position = pos
     }
 
 

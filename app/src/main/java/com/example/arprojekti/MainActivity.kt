@@ -30,10 +30,14 @@ class MainActivity : AppCompatActivity(), FragmentMenuList.FragmentMenuListListe
     }
 
     override fun onElementClick(position: Int) {
+        Log.d("TAG", "Position Main Activity got: $position")
+        arFragment.setPosition(position)
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
             arFragment)
             .addToBackStack(null )
             .commit()
+
+
     }
 
 }
