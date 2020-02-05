@@ -37,7 +37,7 @@
     file: 'sampledata/valmisleipa3.obj',
     name: 'valmisleipa3',
     recenter: 'root',
-    scale: 0.1,
+    scale: 0.02,
   },
   version: '0.54:2',
 }

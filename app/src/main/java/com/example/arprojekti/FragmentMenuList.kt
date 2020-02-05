@@ -14,16 +14,13 @@ import kotlinx.android.synthetic.main.menu_item.view.*
 class FragmentMenuList : Fragment() {
 
     internal var activityCallBack: FragmentMenuListListener? = null
-    lateinit var menuRecycler: RecyclerView
-    val menuItems:  kotlin.collections.MutableList<MenuItem> = java.util.ArrayList()
+    private lateinit var menuRecycler: RecyclerView
+    val menuItems = MenuModel.menuItems
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_menu_list, container, false)
         menuRecycler= view.findViewById(R.id.my_recycler_view)
-
-       menuItems.add(MenuItem(R.drawable.falafel, "Laskiaispulla", "Dessert"))
-       menuItems.add(MenuItem(R.drawable.falafel, "Leipä", "Main"))
 
        // menuRecycler.onCli{parent, view, position, id ->
          //   activityCallBack!!.onElementClick(position)
