@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 28
@@ -42,3 +43,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }
+
+
+sceneform.asset('sampledata/valmisleipa3.obj',
+        'default',
+        'sampledata/valmisleipa3.sfa',
+        'src/main/assets/valmisleipa3')

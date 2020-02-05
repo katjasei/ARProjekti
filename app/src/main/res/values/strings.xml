@@ -5,4 +5,5 @@
     <string name="txt_meal_image">Meal image</string>
     <string name="ccont_desc_meal_img">Meal image</string>
     <string name="txt_menu">Menu</string>
+    <string name="btn_click">Click to add model</string>
 </resources>
